@@ -13,6 +13,7 @@ public class WasRun extends TestCase {
     @Override
     public void setUp() {
         wasSetup = true;
+        log = "setUp ";
     }
 
     public void testMethod() {
