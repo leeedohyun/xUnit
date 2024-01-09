@@ -16,6 +16,7 @@ public class TestCaseTest extends TestCase {
     public void testRunning() {
         Assert.assertEquals(false, test.wasRun);
         test.run();
+        Assert.assertEquals("setUp testMethod", test.log);
         Assert.assertEquals(true, test.wasRun);
     }
 
