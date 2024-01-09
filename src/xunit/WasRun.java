@@ -9,6 +9,11 @@ public class WasRun extends TestCase {
         super(name);
     }
 
+    @Override
+    public void setUp() {
+        wasSetup = true;
+    }
+
     public void testMethod() {
         wasRun = true;
     }
