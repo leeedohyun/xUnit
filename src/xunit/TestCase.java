@@ -11,8 +11,7 @@ public class TestCase {
         this.name = name;
     }
 
-    public TestResult run() {
-        final TestResult result = new TestResult();
+    public void run(final TestResult result) {
         result.testStarted();
         setUp();
 
@@ -24,7 +23,6 @@ public class TestCase {
         }
 
         tearDown();
-        return result;
     }
 
     public void setUp() {
