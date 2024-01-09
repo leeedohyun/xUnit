@@ -23,7 +23,7 @@ public class TestCaseTest extends TestCase {
     public void testSetUp() {
         Assert.assertEquals(false, test.wasSetup);
         test.run();
-        Assert.assertEquals("setUp ", test.log);
+        Assert.assertEquals("setUp testMethod", test.log);
         Assert.assertEquals(true, test.wasSetup);
     }
 }
