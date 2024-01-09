@@ -13,7 +13,8 @@ public class TestSuite implements Test {
 
     public TestSuite(final Class<? extends TestCase> testClass) {
         Arrays.stream(testClass.getDeclaredMethods())
-                .filter(m -> m.getName().startsWith("test"))
+//                .filter(m -> m.getName().startsWith("test")) // reflection을 이용해서 test로 시작하는 메소드를 찾는다.
+                .filter(m -> m.getAnnotation(xunit.annotation.Test.class) != null)
                 .forEach(m -> {
                             try {
                                 add(testClass.getConstructor(String.class).newInstance(m.getName()));
