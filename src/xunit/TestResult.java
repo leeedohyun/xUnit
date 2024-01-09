@@ -3,12 +3,18 @@ package xunit;
 public class TestResult {
 
     private int runCount = 0;
+    private int failureCount = 0;
 
     public void testStarted() {
         runCount++;
     }
 
-    public String getSummary() {
-        return runCount + " run, 0 failed";
+    public void testFailed() {
+        failureCount++;
     }
+
+    public String getSummary() {
+        return runCount + " run, " + failureCount + " failed";
+    }
+
 }
