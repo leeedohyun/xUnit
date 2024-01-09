@@ -2,6 +2,7 @@ package xunit;
 
 public class WasRun extends TestCase {
 
+    public String log;
     public boolean wasRun;
     public boolean wasSetup;
 
